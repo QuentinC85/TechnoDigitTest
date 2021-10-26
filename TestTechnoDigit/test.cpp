@@ -20,10 +20,13 @@ void test::launch_test()
 
 bool test::test_connection_widget()
 {
+    //On enregistre le contenu des différents labels
     QString tempDist = m_ui->Distance_Widget->text();
     QString tempAff = m_ui->Affichage_Distance->text();
-    m_ui->Distance_Widget->setText("3.1564 km");
-    //Ajouter une méthode qui regroupe les actions nécessaire au changement
+
+    QTest::mouseClick(m_ui->Distance_Widget,Qt::LeftButton);
+    QTest::keyClicks(m_ui->Distance_Widget, "hello world");
+
     if(m_ui->Affichage_Distance->text() !=m_ui->Distance_Widget->text())
     {
         m_ui->Distance_Widget->setText(tempDist);
