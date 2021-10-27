@@ -11,11 +11,23 @@ QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+    Q_OBJECT;
+
 
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    enum class unit
+    {
+        m,
+        mm,
+        km,
+        ft,
+        in
+    };
+    Q_ENUM(unit);
+
 
 private slots:
     void on_quitButton_clicked();
@@ -23,5 +35,9 @@ private slots:
 private:
     Ui::MainWindow *ui;
     test *m_test;
+    void SetupUnitMenu();
+    int last_index_unit;
+
+
 };
 #endif // MAINWINDOW_H

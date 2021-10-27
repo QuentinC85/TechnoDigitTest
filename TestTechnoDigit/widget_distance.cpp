@@ -41,7 +41,17 @@ void Widget_Distance::keyPressEvent(QKeyEvent *k)
     }
     else
     {
-        msg.append(k->text());
-        this->setText(msg);
+        bool ok;
+        k->text().toInt(&ok);
+        if(ok)
+        {
+            msg.append(k->text());
+            this->setText(msg);
+        }
+        if(k->key() == Qt::Key_Period)
+        {
+            msg.append(k->text());
+            this->setText(msg);
+        }
     }
 }

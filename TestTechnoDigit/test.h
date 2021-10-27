@@ -11,6 +11,15 @@ class test : public QWidget
 public:
     test(Ui::MainWindow *m_ui){this->m_ui = m_ui;}
     virtual ~test() {}
+    enum class unit
+    {
+        m,
+        mm,
+        km,
+        ft,
+        in
+    };
+    Q_ENUM(unit);
 
 
 public slots :
@@ -19,6 +28,8 @@ public slots :
 private:
     void launch_test();
     bool test_connection_widget();
+
+
 
     Ui::MainWindow *m_ui;
 };
