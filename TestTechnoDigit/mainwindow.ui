@@ -89,7 +89,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="Distance_Widget">
+   <widget class="Widget_Distance" name="Distance_Widget">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -104,6 +104,13 @@
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Widget_Distance</class>
+   <extends>QLabel</extends>
+   <header>widget_distance.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

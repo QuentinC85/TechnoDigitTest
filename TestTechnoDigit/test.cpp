@@ -15,6 +15,10 @@ void test::launch_test()
     {
         std::cout << "Test de connection entre les widgets echoues" << std::endl;
     }
+    else
+    {
+        std::cout << "Test de connection OK" << std::endl;
+    }
 
 }
 
@@ -26,6 +30,8 @@ bool test::test_connection_widget()
 
     QTest::mouseClick(m_ui->Distance_Widget,Qt::LeftButton);
     QTest::keyClicks(m_ui->Distance_Widget, "hello world");
+    QTest::keyPress(m_ui->Distance_Widget, Qt::Key_Return);
+    QTest::keyRelease(m_ui->Distance_Widget, Qt::Key_Return);
 
     if(m_ui->Affichage_Distance->text() !=m_ui->Distance_Widget->text())
     {

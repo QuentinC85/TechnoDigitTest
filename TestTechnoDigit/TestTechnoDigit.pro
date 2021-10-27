@@ -14,11 +14,13 @@ CONFIG += console
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    test.cpp
+    test.cpp \
+    widget_distance.cpp
 
 HEADERS += \
     mainwindow.h \
-    test.h
+    test.h \
+    widget_distance.h
 
 FORMS += \
     mainwindow.ui
