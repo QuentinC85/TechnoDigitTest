@@ -91,12 +91,12 @@ void MainWindow::Convert_menu_unit(int index)
         {
         case(1):
         {
-            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()*1000.0)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/1000.0)));
             break;
         }
         case(2):
         {
-            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/1000.0)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()*1000.0)));
             break;
         }
         case(3):
@@ -120,22 +120,22 @@ void MainWindow::Convert_menu_unit(int index)
         {
         case(0):
         {
-            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/1000.0)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()*1000.0)));
             break;
         }
         case(2):
         {
-            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/1000000.0)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()*1000000.0)));
             break;
         }
         case(3):
         {
-            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/(3.2808*1000.0))));
+            ui->Distance_Widget->write_msg(QString::number(ui->Distance_Widget->msg.toDouble()*305));
             break;
         }
         case(4):
         {
-            ui->Distance_Widget->write_msg(QString::number(((ui->Distance_Widget->msg.toDouble()*0.0254)/1000.0)));
+            ui->Distance_Widget->write_msg(QString::number(ui->Distance_Widget->msg.toDouble()*25.4));
             break;
         }
         }
@@ -147,22 +147,22 @@ void MainWindow::Convert_menu_unit(int index)
         {
         case(0):
         {
-            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()*1000.0)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/1000.0)));
             break;
         }
         case(1):
         {
-            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()*1000000.0)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/1000000.0)));
             break;
         }
         case(3):
         {
-            ui->Distance_Widget->write_msg(QString::number(((ui->Distance_Widget->msg.toDouble()/3.2808)*1000.0)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/3281)));
             break;
         }
         case(4):
         {
-            ui->Distance_Widget->write_msg(QString::number(((ui->Distance_Widget->msg.toDouble()*0.0254)*1000.0)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/39370)));
             break;
         }
         }
@@ -179,12 +179,12 @@ void MainWindow::Convert_menu_unit(int index)
         }
         case(1):
         {
-            ui->Distance_Widget->write_msg(QString::number(((ui->Distance_Widget->msg.toDouble()/3.2808)/1000)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/305)));
             break;
         }
         case(2):
         {
-            ui->Distance_Widget->write_msg(QString::number(((ui->Distance_Widget->msg.toDouble()/3.2808)*1000)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/3281)));
             break;
         }
         case(4):
@@ -206,12 +206,12 @@ void MainWindow::Convert_menu_unit(int index)
         }
         case(1):
         {
-            ui->Distance_Widget->write_msg(QString::number(((ui->Distance_Widget->msg.toDouble()/0.0254)/1000)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()/25.4)));
             break;
         }
         case(2):
         {
-            ui->Distance_Widget->write_msg(QString::number(((ui->Distance_Widget->msg.toDouble()/0.0254)*1000)));
+            ui->Distance_Widget->write_msg(QString::number((ui->Distance_Widget->msg.toDouble()*39370)));
             break;
         }
         case(3):
