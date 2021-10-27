@@ -12,7 +12,8 @@ bool Widget_Distance::event(QEvent *myEvent)
     {
         case(QEvent::MouseButtonRelease):
         {
-
+            msg = "";
+            this->setText("");
             m_isReadOnly = true;
             grabKeyboard();
             break;
@@ -45,12 +46,17 @@ void Widget_Distance::keyPressEvent(QKeyEvent *k)
         if(ok)
         {
             msg.append(k->text());
-            this->setText(msg + " " + QString(QMetaEnum::fromType<unit>().key(m_index)));
+            write_msg(msg);
         }
         if(k->key() == Qt::Key_Period)
         {
             msg.append(k->text());
-            this->setText(msg + " " + QString(QMetaEnum::fromType<unit>().key(m_index)));
+            write_msg(msg);
         }
     }
+}
+
+void Widget_Distance::write_msg(QString msg)
+{
+    this->setText(msg + " " + QString(QMetaEnum::fromType<unit>().key(m_index)));
 }

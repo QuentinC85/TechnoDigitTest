@@ -37,7 +37,10 @@ private:
     test *m_test;
     void SetupUnitMenu();
     int last_index_unit;
-
+    double last_pos_clicked;
+protected:
+    void mouseMoveEvent(QMouseEvent* event);
+    void mousePressEvent(QMouseEvent* event);
 
 };
 #endif // MAINWINDOW_H

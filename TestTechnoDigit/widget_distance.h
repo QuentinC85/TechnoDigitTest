@@ -13,7 +13,8 @@ class Widget_Distance : public QLabel
 
 public:
     Widget_Distance(QWidget *parent = nullptr);
-    void SetIndex(int index){m_index = index;}
+    void SetIndex(int index){m_index = index;};
+    void write_msg(QString msg);
 
     bool m_isReadOnly = false;
     QString msg;
