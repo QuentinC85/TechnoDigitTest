@@ -82,7 +82,6 @@ bool MainWindow::eventFilter(QObject *sender, QEvent *event)
 
 void MainWindow::Convert_menu_unit(int index)
 {
-    std::cout << index << last_index_unit << std::endl;
     //refer to enum unit
     switch(index)
     {
