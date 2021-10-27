@@ -26,9 +26,9 @@ MainWindow::MainWindow(QWidget *parent)
         this->ui->Affichage_Distance->setText("The length is " + this->ui->Distance_Widget->text());
     });
     connect(ui->ResetButton,&QPushButton::clicked,[=](){
+        ui->MenuUnit->setCurrentIndex(0);
         ui->Distance_Widget->setText("1 " + QString(QMetaEnum::fromType<unit>().key(0)));
         ui->Distance_Widget->msg = "1";
-        ui->MenuUnit->setCurrentIndex(0);
         this->ui->Affichage_Distance->setText("The length is " + this->ui->Distance_Widget->text());
     });
 }
