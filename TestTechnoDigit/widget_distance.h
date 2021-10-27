@@ -1,8 +1,9 @@
 #ifndef WIDGET_DISTANCE_H
 #define WIDGET_DISTANCE_H
 
-#include <QLabel>
 #include <iostream>
+#include <QLabel>
+#include <QtCore>
 #include <QEvent>
 #include <QKeyEvent>
 
@@ -12,9 +13,23 @@ class Widget_Distance : public QLabel
 
 public:
     Widget_Distance(QWidget *parent = nullptr);
+    void SetIndex(int index){m_index = index;}
 
     bool m_isReadOnly = false;
     QString msg;
+
+    enum class unit
+    {
+        m,
+        mm,
+        km,
+        ft,
+        in
+    };
+    Q_ENUM(unit);
+
+private:
+    int m_index = 0;
 
 signals:
     void WriteEvent();

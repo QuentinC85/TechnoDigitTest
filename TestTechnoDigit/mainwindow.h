@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include "test.h"
-#include "widget_distance.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
