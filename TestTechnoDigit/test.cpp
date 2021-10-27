@@ -34,7 +34,7 @@ bool test::test_connection_widget()
     QTest::keyPress(m_ui->Distance_Widget, Qt::Key_Return);
     QTest::keyRelease(m_ui->Distance_Widget, Qt::Key_Return);
 
-    if(m_ui->Affichage_Distance->text() != "The length is " + m_ui->Distance_Widget->text() + " " + QString(QMetaEnum::fromType<unit>().key(index_unit)))
+    if(m_ui->Affichage_Distance->text() != "The length is " + m_ui->Distance_Widget->text())
     {
         m_ui->MenuUnit->setCurrentIndex(index_unit);
         m_ui->Distance_Widget->setText(tempDist);

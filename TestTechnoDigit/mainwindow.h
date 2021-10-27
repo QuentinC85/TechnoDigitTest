@@ -38,9 +38,11 @@ private:
     void SetupUnitMenu();
     int last_index_unit;
     double last_pos_clicked;
+
+    void Convert_menu_unit(int index);
+
 protected:
-    void mouseMoveEvent(QMouseEvent* event);
-    void mousePressEvent(QMouseEvent* event);
+    bool eventFilter(QObject *sender, QEvent *event);
 
 };
 #endif // MAINWINDOW_H

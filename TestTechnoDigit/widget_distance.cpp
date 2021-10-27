@@ -58,5 +58,6 @@ void Widget_Distance::keyPressEvent(QKeyEvent *k)
 
 void Widget_Distance::write_msg(QString msg)
 {
+    this->msg = msg;
     this->setText(msg + " " + QString(QMetaEnum::fromType<unit>().key(m_index)));
 }
